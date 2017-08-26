@@ -1,0 +1,138 @@
+<html>
+
+<head>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://get.mavo.io/mavo.css" />
+  <script src="https://get.mavo.io/mavo.js"></script>
+  <style>
+    body {
+      font-family: 'Source Sans Pro', sans-serif;    
+      background-color: black;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 0.25fr 10px 0.75fr;
+      grid-template-rows: auto 20px auto 20px auto 20px auto 20px auto 20px auto 20px;
+    }
+
+    .grid-element {
+      background-color: #444;
+      color: #fff;
+      padding: 20px;
+      font-size: 1em;
+    }
+
+    .header {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      background: #532572;
+    }
+
+    .sidebar {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 6;
+      background: #3C3176;
+      border-radius: 15px;
+    }
+
+    .main {
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 3;
+      grid-row-end: 4;
+      background: #2C4770;
+      border-radius: 15px;
+    }
+
+    .extra {
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 5;
+      grid-row-end: 6;
+      background: #aa9439;
+      border-radius: 15px;
+    }
+
+    .bottom-left {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 7;
+      grid-row-end: 8;
+      background: #4D658D;
+      border-radius: 15px;
+    }
+
+    .bottom-right {
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 7;
+      grid-row-end: 8;
+      background: #9476ab;
+      border-radius: 15px;
+    }
+
+    .footer {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 9;
+      grid-row-end: 10;
+      background: #152D54;
+    }
+    span:before {
+        content: " ";
+        display: inline-block;
+        width: 32px;
+      }
+  </style>
+</head>
+
+<body>
+  <div class="grid-container">
+    <div class="grid-element header"><h1>Developer HUD</h1></div>
+    <div class="grid-element sidebar">
+      <div mv-app="mavoTest">
+        <h3>Code Disciplines:</h3>
+      </div>
+    </div>
+    <div class="grid-element main">
+      <div mv-app="principals" mv-storage="https://github.com/[username]" mv-permissions="read save edit add delete">
+        <ul>
+          <li property="principals" mv-multiple>Be true to myself.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid-element extra">
+        <div mv-app="goals" mv-storage="https://github.com/[username]" mv-permissions="read save edit add delete">
+            <ul>
+              <li property="goals" mv-multiple>Finish Eloquent Ruby.</li>
+            </ul>
+          </div>
+    </div>
+    <div class="grid-element bottom-left">
+      Escape Tactices
+    </div>
+    <div class="grid-element bottom-right">
+      Quote of The Day
+    </div>
+    <div class="grid-element footer">
+        <div mv-app="shortcuts" mv-storage="https://github.com/[username]" mv-permissions="read save edit add delete">
+            <span property="shortcuts" mv-multiple>[1. format code [ alt + shift + f ]</span>
+        </div> 
+    </div>
+</body>
+
+</html>
