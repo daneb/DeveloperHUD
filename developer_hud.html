@@ -9,13 +9,13 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
     crossorigin="anonymous"></script>
 
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
   <link rel="stylesheet" href="https://get.mavo.io/mavo.css" />
   <script src="https://get.mavo.io/mavo.js"></script>
   <style>
     body {
-      font-family: 'Source Sans Pro', sans-serif;    
+      font-family: 'Source Sans Pro', sans-serif;
       background-color: black;
     }
 
@@ -92,20 +92,23 @@
       grid-row-end: 10;
       background: #152D54;
     }
+
     span:before {
-        content: " ";
-        display: inline-block;
-        width: 32px;
-      }
+      content: " ";
+      display: inline-block;
+      width: 32px;
+    }
   </style>
 </head>
 
 <body>
   <div class="grid-container">
-    <div class="grid-element header"><h1>Developer HUD</h1></div>
+    <div class="grid-element header">
+      <h1>Developer HUD</h1>
+    </div>
     <div class="grid-element sidebar">
-      <div mv-app="disciplines" mv-storage="https://github.com/[username]" mv-permissions="read save edit add delete">
-        <div property='disciplines'>Code Disciplines:</div>
+      <div mv-app="disciplines" mv-storage="https://github.com/[username]" mv-plugins="tinymce" mv-permissions="read save edit add delete">
+        <div property='disciplines' class="tinymce">Code Disciplines:</div>
       </div>
     </div>
     <div class="grid-element main">
@@ -116,11 +119,11 @@
       </div>
     </div>
     <div class="grid-element extra">
-        <div mv-app="goals" mv-storage="https://github.com/[username]" mv-permissions="read save edit add delete">
-            <ul>
-              <li property="goals" mv-multiple>Finish Eloquent Ruby.</li>
-            </ul>
-          </div>
+      <div mv-app="goals" mv-storage="https://github.com/[username]" mv-permissions="read save edit add delete">
+        <ul>
+          <li property="goals" mv-multiple>Finish Eloquent Ruby.</li>
+        </ul>
+      </div>
     </div>
     <div class="grid-element bottom-left">
       <div mv-app="tactics" mv-storage="https://github.com/[username]" mv-permissions="read save edit add delete">
@@ -128,14 +131,14 @@
       </div>
     </div>
     <div class="grid-element bottom-right">
-        <div mv-app="quote" mv-storage="https://github.com/[username]" mv-permissions="read save edit add delete">
-          <span property='quote'>Quote of the Day</span>
-        </div>
+      <div mv-app="quote" mv-storage="https://github.com/[username]" mv-permissions="read save edit add delete">
+        <span property='quote'>Quote of the Day</span>
+      </div>
     </div>
     <div class="grid-element footer">
-        <div mv-app="shortcuts" mv-storage="https://github.com/[username]" mv-permissions="read save edit add delete">
-            <span property="shortcuts" mv-multiple>[1. format code [ alt + shift + f ]</span>
-        </div> 
+      <div mv-app="shortcuts" mv-storage="https://github.com/[username]" mv-permissions="read save edit add delete">
+        <span property="shortcuts" mv-multiple>[1. format code [ alt + shift + f ]</span>
+      </div>
     </div>
 </body>
 
