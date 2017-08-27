@@ -104,8 +104,8 @@
   <div class="grid-container">
     <div class="grid-element header"><h1>Developer HUD</h1></div>
     <div class="grid-element sidebar">
-      <div mv-app="mavoTest">
-        <h3>Code Disciplines:</h3>
+      <div mv-app="disciplines" mv-storage="https://github.com/[username]" mv-permissions="read save edit add delete">
+        <div property='disciplines'>Code Disciplines:</div>
       </div>
     </div>
     <div class="grid-element main">
@@ -123,10 +123,14 @@
           </div>
     </div>
     <div class="grid-element bottom-left">
-      Escape Tactices
+      <div mv-app="tactics" mv-storage="https://github.com/[username]" mv-permissions="read save edit add delete">
+        <span property='tactics'>Escape Tactics</span>
+      </div>
     </div>
     <div class="grid-element bottom-right">
-      Quote of The Day
+        <div mv-app="quote" mv-storage="https://github.com/[username]" mv-permissions="read save edit add delete">
+          <span property='quote'>Quote of the Day</span>
+        </div>
     </div>
     <div class="grid-element footer">
         <div mv-app="shortcuts" mv-storage="https://github.com/[username]" mv-permissions="read save edit add delete">
